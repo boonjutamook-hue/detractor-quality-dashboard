@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="th"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dashboard Detractor ด้านคุณภาพ</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#eaf1fb;--surf:#fff;--ink:#12213d;--mute:#52627f;--line:#cfdcf0;--acc:#1d4ed8;--warn:#c2410c;--bar:#1d5fe0;--bar2:#9dbaf0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1428;--surf:#111d36;--ink:#e4ebf8;--mute:#9fb0cf;--line:#223459;--acc:#5b9bff;--warn:#fb923c;--bar:#5b9bff;--bar2:#35507f}}
+:root[data-theme="dark"]{--bg:#0a1428;--surf:#111d36;--ink:#e4ebf8;--mute:#9fb0cf;--line:#223459;--acc:#5b9bff;--warn:#fb923c;--bar:#5b9bff;--bar2:#35507f}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.6 "Noto Sans Thai",system-ui,sans-serif}
+main{max-width:1000px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:26px;font-weight:800;margin:0 0 4px}h2{font-size:16px;font-weight:600;margin:0 0 12px}
+.sub{color:var(--mute);margin:0 0 20px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
+.kpi{background:var(--surf);border:1px solid var(--line);border-radius:6px;padding:14px}
+.kpi b{display:block;font-size:34px;font-weight:800;line-height:1.1}.kpi span{color:var(--mute);font-size:13px}
+.kpi.w b{color:var(--warn)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:6px;padding:16px}
+.wide{grid-column:1/-1}
+.row{display:grid;grid-template-columns:minmax(110px,40%) 1fr 34px;gap:8px;align-items:center;margin:6px 0;font-size:13px}
+.row i{display:block;height:12px;background:var(--bar);border-radius:2px}.row em{font-style:normal;text-align:right;font-weight:600}
+.row.g i{background:var(--bar2)}
+.cols{display:flex;align-items:flex-end;gap:6px;height:150px;border-bottom:1px solid var(--line)}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;font-size:12px}
+.col i{display:block;width:100%;background:var(--bar);border-radius:2px 2px 0 0}.col.l i{background:var(--bar2)}
+.lab{display:flex;gap:6px;font-size:12px;color:var(--mute);margin-top:4px}.lab span{flex:1;text-align:center}
+.stack{display:flex;height:16px;border-radius:3px;overflow:hidden;margin:8px 0}
+ul{margin:0;padding-left:18px}li{margin:6px 0}
+.note{color:var(--mute);font-size:12px;margin-top:10px}
+</style></head><body><main>
+<h1>Dashboard Detractor ด้านคุณภาพ</h1>
+<p class="sub">คอนกรีต CPAC · ข้อมูลถึง 27 ต.ค. 2026 · 114 เรื่อง</p>
+
+<div class="kpis">
+<div class="kpi"><b>114</b><span>เรื่องทั้งหมด</span></div>
+<div class="kpi"><b>86%</b><span>ปิดเรียบร้อยแล้ว (98 เรื่อง)</span></div>
+<div class="kpi w"><b>16</b><span>ยังค้างอยู่</span></div>
+<div class="kpi"><b>32%</b><span>เนื้อคอนกรีตผิดปกติ (36 เรื่อง)</span></div>
+<div class="kpi"><b>14%</b><span>Franchise (16 เรื่อง)</span></div>
+</div>
+
+<div class="grid">
+<section class="card wide"><h2>เรื่องแจ้งรายเดือน (ตามเลขที่เรื่อง)</h2>
+<div class="cols">
+<div class="col"><span>15</span><i style="height:79%"></i></div>
+<div class="col"><span>19</span><i style="height:100%"></i></div>
+<div class="col"><span>17</span><i style="height:89%"></i></div>
+<div class="col"><span>15</span><i style="height:79%"></i></div>
+<div class="col"><span>16</span><i style="height:84%"></i></div>
+<div class="col"><span>14</span><i style="height:74%"></i></div>
+<div class="col l"><span>3</span><i style="height:16%"></i></div>
+<div class="col l"><span>1</span><i style="height:5%"></i></div>
+<div class="col"><span>6</span><i style="height:32%"></i></div>
+<div class="col"><span>8</span><i style="height:42%"></i></div>
+</div>
+<div class="lab"><span>ม.ค.</span><span>ก.พ.</span><span>มี.ค.</span><span>เม.ย.</span><span>พ.ค.</span><span>มิ.ย.</span><span>ก.ค.</span><span>ส.ค.</span><span>ก.ย.</span><span>ต.ค.</span></div>
+<p class="note">เดือน ม.ค.–มิ.ย. อยู่ที่ 14–19 เรื่องต่อเดือน แต่ ก.ค.–ส.ค. เหลือเพียง 3 และ 1 เรื่อง ควรตรวจว่าข้อมูลที่ดึงมาครบหรือไม่</p></section>
+
+<section class="card"><h2>หมวดหมู่ปัญหา</h2>
+<div class="row"><span>เนื้อคอนกรีตผิดปกติ</span><i style="width:100%"></i><em>36</em></div>
+<div class="row"><span>Slump ไม่ได้ตามกำหนด</span><i style="width:36%"></i><em>13</em></div>
+<div class="row"><span>คอนกรีตไม่ครบคิว</span><i style="width:33%"></i><em>12</em></div>
+<div class="row"><span>คุณสมบัติการทำงาน</span><i style="width:28%"></i><em>10</em></div>
+<div class="row"><span>มีสิ่งอื่นเจือปน</span><i style="width:22%"></i><em>8</em></div>
+<div class="row"><span>หินเยอะไป</span><i style="width:19%"></i><em>7</em></div>
+<div class="row g"><span>ไม่เซ็ตตัวตามกำหนด</span><i style="width:14%"></i><em>5</em></div>
+<div class="row g"><span>ซีเมนต์น้อย / ร้าว / ทรายเยอะ</span><i style="width:11%"></i><em>4 ต่อหมวด</em></div>
+<div class="row g"><span>อื่น ๆ (7 หมวด)</span><i style="width:25%"></i><em>9</em></div></section>
+
+<section class="card"><h2>แยกตามกิจการ</h2>
+<div class="row"><span>CPAC Metro</span><i style="width:100%"></i><em>31</em></div>
+<div class="row"><span>CPAC East</span><i style="width:74%"></i><em>23</em></div>
+<div class="row"><span>CPAC Northeast</span><i style="width:61%"></i><em>19</em></div>
+<div class="row"><span>CPAC South</span><i style="width:52%"></i><em>16</em></div>
+<div class="row"><span>CPAC West</span><i style="width:45%"></i><em>14</em></div>
+<div class="row"><span>CPAC North</span><i style="width:35%"></i><em>11</em></div>
+<p class="note">ภาคที่มากสุด: Metro 2 (15), West 2 (12), East 2 (10)</p></section>
+
+<section class="card"><h2>สถานะ</h2>
+<div class="stack"><i style="width:86%;background:var(--bar)"></i><i style="width:14%;background:var(--warn)"></i></div>
+<div class="row"><span>เสร็จสิ้น</span><i style="width:100%"></i><em>98</em></div>
+<div class="row g"><span>รอรับทราบเรื่อง</span><i style="width:5%"></i><em>5</em></div>
+<div class="row g"><span>เรื่องแจ้งใหม่</span><i style="width:4%"></i><em>4</em></div>
+<div class="row g"><span>รออนุมัติ</span><i style="width:4%"></i><em>4</em></div>
+<div class="row g"><span>รับเรื่องและดำเนินการ</span><i style="width:3%"></i><em>3</em></div>
+<p class="note">เรื่องค้างบางรายการเก่าตั้งแต่ ก.พ.–มี.ค. และมี 11 เรื่องที่ยังไม่กรอกสาเหตุและการแก้ไข</p></section>
+
+<section class="card wide"><h2>เจาะลึก: เนื้อคอนกรีตผิดปกติ (36 เรื่อง)</h2>
+<div class="kpis">
+<div class="kpi"><b>36</b><span>เรื่อง (32% ของทั้งหมด)</span></div>
+<div class="kpi"><b>81%</b><span>ปิดแล้ว (29 เรื่อง)</span></div>
+<div class="kpi w"><b>7</b><span>ยังค้างอยู่</span></div>
+<div class="kpi"><b>5</b><span>เรื่องจาก Franchise</span></div>
+</div>
+<div class="grid">
+<div><h2>เนื้อคอนกรีต</h2>
+<div class="row"><span>เหลวเกินไป</span><i style="width:100%"></i><em>22</em></div>
+<div class="row"><span>ข้น / แข็ง / เหนียว</span><i style="width:59%"></i><em>13</em></div>
+<div class="row g"><span>หินแยก / ออกหิน</span><i style="width:23%"></i><em>5</em></div>
+<div class="row g"><span>ออกทราย</span><i style="width:9%"></i><em>2</em></div>
+<p class="note">นับจากคำในช่องรายละเอียดการแจ้ง บางเรื่องมีหลายอาการ จึงรวมแล้วเกิน 36 เหลวเป็นอาการหลัก แต่มีฝั่งข้นแข็งเกือบ 4 ใน 10 ของเรื่อง</p></div>
+<div><h2>แยกตามกิจการ</h2>
+<div class="row"><span>CPAC Metro</span><i style="width:100%"></i><em>12</em></div>
+<div class="row"><span>CPAC East</span><i style="width:67%"></i><em>8</em></div>
+<div class="row"><span>CPAC Northeast</span><i style="width:50%"></i><em>6</em></div>
+<div class="row g"><span>CPAC South</span><i style="width:33%"></i><em>4</em></div>
+<div class="row g"><span>CPAC North</span><i style="width:25%"></i><em>3</em></div>
+<div class="row g"><span>CPAC West</span><i style="width:25%"></i><em>3</em></div>
+<p class="note">Metro คิดเป็น 1 ใน 3 ของหมวดนี้</p></div>
+<div><h2>รายเดือน</h2>
+<div class="cols" style="height:110px">
+<div class="col"><span>2</span><i style="height:20%"></i></div>
+<div class="col"><span>10</span><i style="height:100%"></i></div>
+<div class="col"><span>5</span><i style="height:50%"></i></div>
+<div class="col"><span>1</span><i style="height:10%"></i></div>
+<div class="col"><span>5</span><i style="height:50%"></i></div>
+<div class="col"><span>5</span><i style="height:50%"></i></div>
+<div class="col l"><span>0</span><i style="height:0"></i></div>
+<div class="col l"><span>1</span><i style="height:10%"></i></div>
+<div class="col"><span>2</span><i style="height:20%"></i></div>
+<div class="col"><span>5</span><i style="height:50%"></i></div>
+</div>
+<div class="lab"><span>ม.ค.</span><span>ก.พ.</span><span>มี.ค.</span><span>เม.ย.</span><span>พ.ค.</span><span>มิ.ย.</span><span>ก.ค.</span><span>ส.ค.</span><span>ก.ย.</span><span>ต.ค.</span></div>
+<p class="note">ก.พ. สูงสุด 10 เรื่อง ส่วน ต.ค. มี 5 เรื่องแล้วในเวลาไม่ถึงเดือน</p></div>
+<div><h2>สาเหตุที่พบในช่องวิเคราะห์</h2>
+<div class="row"><span>เติมน้ำ / จบส. ปรับ slump</span><i style="width:100%"></i><em>11</em></div>
+<div class="row"><span>ข้อมูลความต้องการไม่ครบ</span><i style="width:100%"></i><em>11</em></div>
+<div class="row"><span>รอเท / ส่งช้า / slump loss</span><i style="width:100%"></i><em>11</em></div>
+<div class="row g"><span>โครงสร้าง / วิธีเท</span><i style="width:64%"></i><em>7</em></div>
+<div class="row g"><span>ระบบผลิต / โรงงาน</span><i style="width:64%"></i><em>7</em></div>
+<p class="note">นับจากคำสำคัญ ซ้อนกันได้ และมี 5 เรื่องที่ยังไม่กรอกสาเหตุ</p></div>
+</div>
+<ul>
+<li><b>ปัญหาส่วนใหญ่เกิดจากการดำเนินงาน มิใช่สูตรคอนกรีต:</b> สาเหตุที่พบมากที่สุด ได้แก่ การเติมน้ำเพิ่มเติม ข้อมูลค่า slump ที่ไม่ส่งถึงโรงงาน และการรอเทเป็นเวลานานจนค่า slump ลดลง</li>
+<li><b>ลักษณะที่ลูกค้าแจ้งมีทั้งสองด้านที่ตรงข้ามกัน:</b> ลูกค้างานปาดหน้าหรืองานเทด้วยกระป๋องมักแจ้งว่าคอนกรีตข้นเกินไป ขณะที่งานบันได พื้นลาดเอียง หรืองานเทผ่านรางมักแจ้งว่าเหลวเกินไป สะท้อนว่าค่า slump ที่เหมาะสมแตกต่างกันตามโครงสร้างงาน ศูนย์รับจ่ายจึงควรสอบถามประเภทโครงสร้างและวิธีการเทในทุกครั้งที่รับจอง</li>
+<li><b>ความไม่สม่ำเสมอระหว่างเที่ยวรถ:</b> ประมาณ 11 เรื่องระบุว่าผิดปกติเฉพาะบางคันหรือบางรอบ เช่น คันแรกปกติแต่คันหลังเหลว จึงควรตรวจสอบค่า slump ก่อนปล่อยรถออกจากโรงงานทุกคัน</li>
+<li><b>แนวทางดำเนินการต่อไป:</b> ให้ลูกค้าลงนามใน DP ทุกครั้งที่ขอเติมน้ำ ระบุค่า slump ที่ต้องการในช่องหมายเหตุของใบจ่ายงาน และติดตามปิดเรื่องที่ค้างอยู่อีก 7 เรื่อง</li>
+</ul></section>
+</div></main></body></html>

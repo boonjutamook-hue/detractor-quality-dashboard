@@ -30,6 +30,13 @@ h1{font-size:26px;font-weight:800;margin:0 0 4px}h2{font-size:16px;font-weight:6
 .stack{display:flex;height:16px;border-radius:3px;overflow:hidden;margin:8px 0}
 ul{margin:0;padding-left:18px}li{margin:6px 0}
 .note{color:var(--mute);font-size:12px;margin-top:10px}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-top:12px}
+.sc{border:1px solid var(--line);border-radius:6px;padding:12px}
+.sc h3{font-size:15px;font-weight:600;margin:0 0 2px}.sc h3 small{color:var(--mute);font-weight:400;font-size:13px}
+.sc .meta{color:var(--mute);font-size:12px;margin:0 0 6px}.sc ul{font-size:13px}.sc li{margin:4px 0}
+[id]{scroll-margin-top:12px}
+.lk{cursor:pointer;border-radius:4px}.lk:hover{background:color-mix(in srgb,var(--bar) 12%,transparent)}.lk:focus-visible{outline:2px solid var(--acc)}
+.hl{outline:2px solid var(--acc);outline-offset:3px;border-radius:6px}
 </style></head><body><main>
 <h1>Dashboard Detractor ด้านคุณภาพ</h1>
 <p class="sub">คอนกรีต CPAC · ข้อมูลถึง 27 ต.ค. 2026 · 114 เรื่อง</p>
@@ -60,15 +67,18 @@ ul{margin:0;padding-left:18px}li{margin:6px 0}
 <p class="note">เดือน ม.ค.–มิ.ย. อยู่ที่ 14–19 เรื่องต่อเดือน แต่ ก.ค.–ส.ค. เหลือเพียง 3 และ 1 เรื่อง ควรตรวจว่าข้อมูลที่ดึงมาครบหรือไม่</p></section>
 
 <section class="card"><h2>หมวดหมู่ปัญหา</h2>
-<div class="row"><span>เนื้อคอนกรีตผิดปกติ</span><i style="width:100%"></i><em>36</em></div>
-<div class="row"><span>Slump ไม่ได้ตามกำหนด</span><i style="width:36%"></i><em>13</em></div>
-<div class="row"><span>คอนกรีตไม่ครบคิว</span><i style="width:33%"></i><em>12</em></div>
-<div class="row"><span>คุณสมบัติการทำงาน</span><i style="width:28%"></i><em>10</em></div>
-<div class="row"><span>มีสิ่งอื่นเจือปน</span><i style="width:22%"></i><em>8</em></div>
-<div class="row"><span>หินเยอะไป</span><i style="width:19%"></i><em>7</em></div>
-<div class="row g"><span>ไม่เซ็ตตัวตามกำหนด</span><i style="width:14%"></i><em>5</em></div>
-<div class="row g"><span>ซีเมนต์น้อย / ร้าว / ทรายเยอะ</span><i style="width:11%"></i><em>4 ต่อหมวด</em></div>
-<div class="row g"><span>อื่น ๆ (7 หมวด)</span><i style="width:25%"></i><em>9</em></div></section>
+<p class="note" style="margin:-6px 0 8px">คลิกที่หมวดเพื่อเลื่อนไปดูรายละเอียดด้านล่าง</p>
+<div class="row lk" data-t="d-meat" tabindex="0" role="link"><span>เนื้อคอนกรีตผิดปกติ</span><i style="width:100%"></i><em>36</em></div>
+<div class="row lk" data-t="c-slump" tabindex="0" role="link"><span>Slump ไม่ได้ตามกำหนด</span><i style="width:36%"></i><em>13</em></div>
+<div class="row lk" data-t="c-qty" tabindex="0" role="link"><span>คอนกรีตไม่ครบคิว</span><i style="width:33%"></i><em>12</em></div>
+<div class="row lk" data-t="c-work" tabindex="0" role="link"><span>คุณสมบัติการทำงาน</span><i style="width:28%"></i><em>10</em></div>
+<div class="row lk" data-t="c-foreign" tabindex="0" role="link"><span>มีสิ่งอื่นเจือปน</span><i style="width:22%"></i><em>8</em></div>
+<div class="row lk" data-t="c-stone" tabindex="0" role="link"><span>หินเยอะไป</span><i style="width:19%"></i><em>7</em></div>
+<div class="row g lk" data-t="c-set" tabindex="0" role="link"><span>ไม่เซ็ตตัวตามกำหนด</span><i style="width:14%"></i><em>5</em></div>
+<div class="row g lk" data-t="c-cement" tabindex="0" role="link"><span>ซีเมนต์น้อย</span><i style="width:11%"></i><em>4</em></div>
+<div class="row g lk" data-t="c-crack" tabindex="0" role="link"><span>แตกร้าว</span><i style="width:11%"></i><em>4</em></div>
+<div class="row g lk" data-t="c-sand" tabindex="0" role="link"><span>ทรายเยอะไป</span><i style="width:11%"></i><em>4</em></div>
+<div class="row g lk" data-t="c-other" tabindex="0" role="link"><span>อื่น ๆ (7 หมวดย่อย)</span><i style="width:31%"></i><em>11</em></div></section>
 
 <section class="card"><h2>แยกตามกิจการ</h2>
 <div class="row"><span>CPAC Metro</span><i style="width:100%"></i><em>31</em></div>
@@ -88,7 +98,15 @@ ul{margin:0;padding-left:18px}li{margin:6px 0}
 <div class="row g"><span>รับเรื่องและดำเนินการ</span><i style="width:3%"></i><em>3</em></div>
 <p class="note">เรื่องค้างบางรายการเก่าตั้งแต่ ก.พ.–มี.ค. และมี 11 เรื่องที่ยังไม่กรอกสาเหตุและการแก้ไข</p></section>
 
-<section class="card wide"><h2>เจาะลึก: เนื้อคอนกรีตผิดปกติ (36 เรื่อง)</h2>
+<section class="card"><h2>แยกตามประเภทธุรกิจ</h2>
+<div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+<div role="img" aria-label="กราฟวงกลม CPAC 86% Franchise 14%" style="width:140px;height:140px;border-radius:50%;background:conic-gradient(var(--bar) 0 86%,var(--warn) 86% 100%);position:relative"><div style="position:absolute;inset:34px;border-radius:50%;background:var(--surf)"></div></div>
+<div>
+<div style="margin:6px 0"><span style="display:inline-block;width:12px;height:12px;border-radius:2px;background:var(--bar);margin-right:8px"></span>CPAC <b>98</b> เรื่อง (86%)</div>
+<div style="margin:6px 0"><span style="display:inline-block;width:12px;height:12px;border-radius:2px;background:var(--warn);margin-right:8px"></span>Franchise <b>16</b> เรื่อง (14%)</div>
+</div></div></section>
+
+<section class="card wide" id="d-meat"><h2>เจาะลึก: เนื้อคอนกรีตผิดปกติ (36 เรื่อง)</h2>
 <div class="kpis">
 <div class="kpi"><b>36</b><span>เรื่อง (32% ของทั้งหมด)</span></div>
 <div class="kpi"><b>81%</b><span>ปิดแล้ว (29 เรื่อง)</span></div>
@@ -101,7 +119,7 @@ ul{margin:0;padding-left:18px}li{margin:6px 0}
 <div class="row"><span>ข้น / แข็ง / เหนียว</span><i style="width:59%"></i><em>13</em></div>
 <div class="row g"><span>หินแยก / ออกหิน</span><i style="width:23%"></i><em>5</em></div>
 <div class="row g"><span>ออกทราย</span><i style="width:9%"></i><em>2</em></div>
-<p class="note">นับจากคำในช่องรายละเอียดการแจ้ง บางเรื่องมีหลายอาการ จึงรวมแล้วเกิน 36 เหลวเป็นอาการหลัก แต่มีฝั่งข้นแข็งเกือบ 4 ใน 10 ของเรื่อง</p></div>
+<p class="note">นับจากคำในช่องรายละเอียดการแจ้ง บางเรื่องมีหลายลักษณะ จึงรวมแล้วเกิน 36 เรื่อง เหลวเป็นลักษณะหลัก แต่ฝั่งข้นแข็งก็คิดเป็นราว 4 ใน 10 ของเรื่องทั้งหมด</p></div>
 <div><h2>แยกตามกิจการ</h2>
 <div class="row"><span>CPAC Metro</span><i style="width:100%"></i><em>12</em></div>
 <div class="row"><span>CPAC East</span><i style="width:67%"></i><em>8</em></div>
@@ -139,4 +157,141 @@ ul{margin:0;padding-left:18px}li{margin:6px 0}
 <li><b>ความไม่สม่ำเสมอระหว่างเที่ยวรถ:</b> ประมาณ 11 เรื่องระบุว่าผิดปกติเฉพาะบางคันหรือบางรอบ เช่น คันแรกปกติแต่คันหลังเหลว จึงควรตรวจสอบค่า slump ก่อนปล่อยรถออกจากโรงงานทุกคัน</li>
 <li><b>แนวทางดำเนินการต่อไป:</b> ให้ลูกค้าลงนามใน DP ทุกครั้งที่ขอเติมน้ำ ระบุค่า slump ที่ต้องการในช่องหมายเหตุของใบจ่ายงาน และติดตามปิดเรื่องที่ค้างอยู่อีก 7 เรื่อง</li>
 </ul></section>
-</div></main></body></html>
+
+<section class="card wide" id="c-slump"><h2>เจาะลึก: Slump ไม่ได้ตามกำหนด (13 เรื่อง)</h2>
+<div class="kpis"><div class="kpi"><b>13</b><span>เรื่อง (11% ของทั้งหมด)</span></div><div class="kpi"><b>85%</b><span>ปิดแล้ว (11 เรื่อง)</span></div><div class="kpi w"><b>2</b><span>ยังค้างอยู่</span></div><div class="kpi"><b>1</b><span>เรื่องจาก Franchise</span></div></div>
+<div class="grid">
+<div><h2>ลักษณะที่ลูกค้าแจ้ง</h2>
+<div class="row"><span>Slump สูงเกิน / เหลว</span><i style="width:100%"></i><em>9</em></div>
+<div class="row"><span>Slump ต่ำ / ข้น / ไม่ไหล</span><i style="width:44%"></i><em>4</em></div>
+<p class="note">จัดกลุ่มจากรายละเอียดการแจ้งของแต่ละเรื่อง</p></div>
+<div><h2>แยกตามกิจการ</h2>
+<div class="row"><span>East</span><i style="width:100%"></i><em>4</em></div>
+<div class="row"><span>North</span><i style="width:100%"></i><em>4</em></div>
+<div class="row"><span>Metro</span><i style="width:75%"></i><em>3</em></div>
+<div class="row"><span>Northeast</span><i style="width:50%"></i><em>2</em></div>
+</div>
+<div><h2>รายเดือน</h2>
+<div class="cols" style="height:110px"><div class="col"><span>5</span><i style="height:100%"></i></div><div class="col"><span>2</span><i style="height:40%"></i></div><div class="col"><span>3</span><i style="height:60%"></i></div><div class="col"><span>1</span><i style="height:20%"></i></div><div class="col"><span>2</span><i style="height:40%"></i></div><div class="col"><span>0</span><i style="height:0%"></i></div><div class="col"><span>0</span><i style="height:0%"></i></div><div class="col"><span>0</span><i style="height:0%"></i></div><div class="col"><span>0</span><i style="height:0%"></i></div><div class="col"><span>0</span><i style="height:0%"></i></div></div><div class="lab"><span>ม.ค.</span><span>ก.พ.</span><span>มี.ค.</span><span>เม.ย.</span><span>พ.ค.</span><span>มิ.ย.</span><span>ก.ค.</span><span>ส.ค.</span><span>ก.ย.</span><span>ต.ค.</span></div><p class="note">ม.ค. สูงสุด 5 เรื่อง และไม่พบเรื่องในหมวดนี้ตั้งแต่ มิ.ย. ตามข้อมูลในไฟล์</p></div>
+<div><h2>สาเหตุที่พบในช่องวิเคราะห์สาเหตุ</h2>
+<div class="row"><span>เลือกสินค้าหรือวิธีเทไม่เหมาะกับงาน</span><i style="width:100%"></i><em>4</em></div>
+<div class="row"><span>โรงงานผลิตเผื่อ slump มากเกินไป</span><i style="width:75%"></i><em>3</em></div>
+<div class="row"><span>ข้อมูล slump ไม่ถึงโรงงาน</span><i style="width:50%"></i><em>2</em></div>
+<div class="row"><span>เติมน้ำหน้างาน</span><i style="width:50%"></i><em>2</em></div>
+<div class="row"><span>slump loss จากอากาศร้อนและการรอเท</span><i style="width:25%"></i><em>1</em></div>
+<p class="note">12 จาก 13 เรื่องกรอกสาเหตุ (1 เรื่องยังว่าง)</p></div>
+</div>
+<ul><li><b>ลักษณะหลักคือเหลวเกิน:</b> 9 จาก 13 เรื่อง ค่าที่วัดหน้างานสูงกว่าที่ลูกค้าต้องการ เช่น 17 ซม. แทน 12 ซม.</li><li><b>ต้นเหตุกระจายหลายจุด:</b> ทั้งฝั่งโรงงาน (ผลิตเผื่อมาก) ฝั่งรับจอง (ข้อมูลไม่ถึงโรงงาน) และหน้างาน (เติมน้ำ เลือกสินค้าไม่ตรงงาน)</li><li><b>งานที่เจอบ่อย:</b> งานเข็มเจาะเล็ก เทพื้นบนแผ่นสำเร็จ และงานผนังแคบที่ใช้เครื่องจี้ไม่ได้ ซึ่งต้องการ slump ต่างจากมาตรฐาน</li><li><b>แนวทาง:</b> ระบุ slump ที่ต้องการที่หน้างานในใบจ่ายงานทุกครั้ง ปรับค่าเผื่อ slump ตามอากาศและระยะทาง และแนะนำสินค้าให้ตรงกับโครงสร้างงาน</li></ul></section>
+
+<section class="card wide" id="c-qty"><h2>เจาะลึก: คอนกรีตไม่ครบคิว (12 เรื่อง)</h2>
+<div class="kpis"><div class="kpi"><b>12</b><span>เรื่อง (11% ของทั้งหมด)</span></div><div class="kpi"><b>92%</b><span>ปิดแล้ว (11 เรื่อง)</span></div><div class="kpi w"><b>1</b><span>ยังค้างอยู่</span></div><div class="kpi"><b>1</b><span>เรื่องจาก Franchise</span></div></div>
+<div class="grid">
+<div><h2>ขนาดของส่วนที่ขาด</h2>
+<div class="row"><span>ไม่ระบุปริมาณ / ใช้ไม่เท่ากัน</span><i style="width:100%"></i><em>5</em></div>
+<div class="row"><span>ขาด 1 คิวขึ้นไป</span><i style="width:80%"></i><em>4</em></div>
+<div class="row"><span>ขาดไม่ถึง 1 คิว</span><i style="width:60%"></i><em>3</em></div>
+<p class="note">จัดกลุ่มจากรายละเอียดการแจ้ง</p></div>
+<div><h2>แยกตามกิจการ</h2>
+<div class="row"><span>Metro</span><i style="width:100%"></i><em>4</em></div>
+<div class="row"><span>West</span><i style="width:50%"></i><em>2</em></div>
+<div class="row"><span>East</span><i style="width:50%"></i><em>2</em></div>
+<div class="row"><span>Northeast</span><i style="width:50%"></i><em>2</em></div>
+<div class="row"><span>North</span><i style="width:25%"></i><em>1</em></div>
+<div class="row"><span>South</span><i style="width:25%"></i><em>1</em></div>
+</div>
+<div><h2>รายเดือน</h2>
+<div class="cols" style="height:110px"><div class="col"><span>0</span><i style="height:0%"></i></div><div class="col"><span>3</span><i style="height:100%"></i></div><div class="col"><span>2</span><i style="height:67%"></i></div><div class="col"><span>1</span><i style="height:33%"></i></div><div class="col"><span>3</span><i style="height:100%"></i></div><div class="col"><span>1</span><i style="height:33%"></i></div><div class="col"><span>1</span><i style="height:33%"></i></div><div class="col"><span>0</span><i style="height:0%"></i></div><div class="col"><span>1</span><i style="height:33%"></i></div><div class="col"><span>0</span><i style="height:0%"></i></div></div><div class="lab"><span>ม.ค.</span><span>ก.พ.</span><span>มี.ค.</span><span>เม.ย.</span><span>พ.ค.</span><span>มิ.ย.</span><span>ก.ค.</span><span>ส.ค.</span><span>ก.ย.</span><span>ต.ค.</span></div><p class="note">ก.พ. และ พ.ค. สูงสุดเดือนละ 3 เรื่อง</p></div>
+<div><h2>สาเหตุที่พบในช่องวิเคราะห์สาเหตุ</h2>
+<div class="row"><span>ความหนาหน้างานเกินที่คำนวณ</span><i style="width:100%"></i><em>5</em></div>
+<div class="row"><span>แบบหล่อโก่ง ขนาดไม่ตรง หรือพื้นทรุด</span><i style="width:80%"></i><em>4</em></div>
+<div class="row"><span>บริการของ จบส.</span><i style="width:20%"></i><em>1</em></div>
+<div class="row"><span>ค่าขนส่งเมื่อสั่งเพิ่ม</span><i style="width:20%"></i><em>1</em></div>
+<p class="note">11 จาก 12 เรื่องกรอกสาเหตุ (1 เรื่องยังว่าง)</p></div>
+</div>
+<ul><li><b>สาเหตุส่วนใหญ่อยู่ที่หน้างาน:</b> 9 จาก 11 เรื่องที่กรอกสาเหตุ เกิดจากแบบหล่อหรือความหนาจริงต่างจากที่คำนวณ ส่วนข้อมูลผลิตและ GPS ของโรงงานตรวจแล้วปกติ</li><li><b>มีการพิสูจน์ด้วยการเจาะ core:</b> บางเรื่องใช้ผลเจาะวัดความหนาพื้นเพื่อให้ลูกค้ายอมรับ ซึ่งได้ผลดี</li><li><b>ผลกระทบด้านความรู้สึกลูกค้า:</b> บางรายระบุว่าไม่กล้าสั่ง CPAC อีก แม้ข้อเท็จจริงคือคอนกรีตไม่ขาดคิว</li><li><b>แนวทาง:</b> ให้ทีมบริการช่วยวัดแบบก่อนสั่ง แนะนำให้วัดความหนาจริงและเผื่อความคลาดเคลื่อน และเตรียมใช้การเจาะ core เมื่อมีข้อโต้แย้ง</li></ul></section>
+
+<section class="card wide" id="c-work"><h2>เจาะลึก: คุณสมบัติในการทำงานไม่ได้ตามที่ต้องการ (10 เรื่อง)</h2>
+<div class="kpis"><div class="kpi"><b>10</b><span>เรื่อง (9% ของทั้งหมด)</span></div><div class="kpi"><b>80%</b><span>ปิดแล้ว (8 เรื่อง)</span></div><div class="kpi w"><b>2</b><span>ยังค้างอยู่</span></div><div class="kpi"><b>1</b><span>เรื่องจาก Franchise</span></div></div>
+<div class="grid">
+<div><h2>ลักษณะที่ลูกค้าแจ้ง</h2>
+<div class="row"><span>ข้น / หนืด / ปาดไม่ได้</span><i style="width:100%"></i><em>5</em></div>
+<div class="row"><span>เหลวผิดปกติ</span><i style="width:60%"></i><em>3</em></div>
+<div class="row"><span>ผิวหน้าแตก</span><i style="width:20%"></i><em>1</em></div>
+<div class="row"><span>ไม่สม่ำเสมอระหว่างเที่ยว</span><i style="width:20%"></i><em>1</em></div>
+<p class="note">จัดกลุ่มจากรายละเอียดการแจ้ง</p></div>
+<div><h2>แยกตามกิจการ</h2>
+<div class="row"><span>East</span><i style="width:100%"></i><em>3</em></div>
+<div class="row"><span>Northeast</span><i style="width:67%"></i><em>2</em></div>
+<div class="row"><span>Metro</span><i style="width:67%"></i><em>2</em></div>
+<div class="row"><span>West</span><i style="width:67%"></i><em>2</em></div>
+<div class="row"><span>South</span><i style="width:33%"></i><em>1</em></div>
+</div>
+<div><h2>รายเดือน</h2>
+<div class="cols" style="height:110px"><div class="col"><span>0</span><i style="height:0%"></i></div><div class="col"><span>0</span><i style="height:0%"></i></div><div class="col"><span>2</span><i style="height:40%"></i></div><div class="col"><span>5</span><i style="height:100%"></i></div><div class="col"><span>0</span><i style="height:0%"></i></div><div class="col"><span>2</span><i style="height:40%"></i></div><div class="col"><span>0</span><i style="height:0%"></i></div><div class="col"><span>0</span><i style="height:0%"></i></div><div class="col"><span>0</span><i style="height:0%"></i></div><div class="col"><span>1</span><i style="height:20%"></i></div></div><div class="lab"><span>ม.ค.</span><span>ก.พ.</span><span>มี.ค.</span><span>เม.ย.</span><span>พ.ค.</span><span>มิ.ย.</span><span>ก.ค.</span><span>ส.ค.</span><span>ก.ย.</span><span>ต.ค.</span></div><p class="note">เม.ย. มี 5 เรื่อง คิดเป็นครึ่งหนึ่งของหมวดนี้</p></div>
+<div><h2>สาเหตุที่พบในช่องวิเคราะห์สาเหตุ</h2>
+<div class="row"><span>จบส. หรือโรงงานไม่ตรวจ/รายงาน slump ไม่ตรง</span><i style="width:100%"></i><em>2</em></div>
+<div class="row"><span>เติมหรือปรับ slump หน้างาน</span><i style="width:100%"></i><em>2</em></div>
+<div class="row"><span>ส่งช้าหรือเทนานจน slump ตก</span><i style="width:100%"></i><em>2</em></div>
+<div class="row"><span>ข้อมูล slump ไม่ถึงโรงงาน</span><i style="width:50%"></i><em>1</em></div>
+<div class="row"><span>สินค้าหรือวิธีเทไม่เหมาะ</span><i style="width:50%"></i><em>1</em></div>
+<div class="row"><span>ส่วนผสมออกทราย</span><i style="width:50%"></i><em>1</em></div>
+<p class="note">9 จาก 10 เรื่องกรอกสาเหตุ (1 เรื่องยังว่าง)</p></div>
+</div>
+<ul><li><b>ข้นมากกว่าเหลว:</b> ลักษณะข้นหรือหนืด 5 เรื่อง มากกว่าเหลว 3 เรื่อง ซึ่งต่างจากหมวดเนื้อคอนกรีตผิดปกติที่เหลวเป็นหลัก</li><li><b>มีวินัยการตรวจ slump เป็นประเด็น:</b> พบทั้งการลัดขั้นตอนไม่ตรวจ slump ก่อนออกจากโรงงาน และการรายงานค่า slump ไม่ตรงตามจริง</li><li><b>สถานะ:</b> ค้างอยู่ 2 เรื่อง อยู่ในขั้นรับเรื่องและดำเนินการ ควรติดตามปิด</li><li><b>แนวทาง:</b> ตรวจ slump ทุกคันก่อนออกจากโรงงาน บันทึกในใบจ่ายงาน ให้ลูกค้าเซ็น DP เมื่อขอเติมน้ำ และใช้สินค้าที่เหมาะกับงาน เช่น Topping หรือ Super Plus</li></ul></section>
+
+<section class="card wide" id="c-foreign"><h2>เจาะลึก: มีสิ่งอื่นเจือปน (8 เรื่อง)</h2>
+<div class="kpis"><div class="kpi"><b>8</b><span>เรื่อง (7% ของทั้งหมด)</span></div><div class="kpi"><b>100%</b><span>ปิดแล้ว (8 เรื่อง)</span></div><div class="kpi"><b>0</b><span>ยังค้างอยู่</span></div><div class="kpi"><b>2</b><span>เรื่องจาก Franchise</span></div></div>
+<div class="grid">
+<div><h2>ประเภทสิ่งเจือปน</h2>
+<div class="row"><span>เศษไม้ ใบไม้ กิ่งไม้ หญ้า</span><i style="width:100%"></i><em>4</em></div>
+<div class="row"><span>ก้อนปูนแข็งและเศษวัสดุ</span><i style="width:50%"></i><em>2</em></div>
+<div class="row"><span>ผงถ่าน</span><i style="width:25%"></i><em>1</em></div>
+<div class="row"><span>เชือกและหินก้อนใหญ่</span><i style="width:25%"></i><em>1</em></div>
+<p class="note">จัดกลุ่มจากรายละเอียดการแจ้ง</p></div>
+<div><h2>แยกตามกิจการ</h2>
+<div class="row"><span>South</span><i style="width:100%"></i><em>2</em></div>
+<div class="row"><span>North</span><i style="width:100%"></i><em>2</em></div>
+<div class="row"><span>Northeast</span><i style="width:50%"></i><em>1</em></div>
+<div class="row"><span>West</span><i style="width:50%"></i><em>1</em></div>
+<div class="row"><span>East</span><i style="width:50%"></i><em>1</em></div>
+<div class="row"><span>Metro</span><i style="width:50%"></i><em>1</em></div>
+</div>
+<div><h2>รายเดือน</h2>
+<div class="cols" style="height:110px"><div class="col"><span>2</span><i style="height:100%"></i></div><div class="col"><span>0</span><i style="height:0%"></i></div><div class="col"><span>1</span><i style="height:50%"></i></div><div class="col"><span>1</span><i style="height:50%"></i></div><div class="col"><span>2</span><i style="height:100%"></i></div><div class="col"><span>2</span><i style="height:100%"></i></div><div class="col"><span>0</span><i style="height:0%"></i></div><div class="col"><span>0</span><i style="height:0%"></i></div><div class="col"><span>0</span><i style="height:0%"></i></div><div class="col"><span>0</span><i style="height:0%"></i></div></div><div class="lab"><span>ม.ค.</span><span>ก.พ.</span><span>มี.ค.</span><span>เม.ย.</span><span>พ.ค.</span><span>มิ.ย.</span><span>ก.ค.</span><span>ส.ค.</span><span>ก.ย.</span><span>ต.ค.</span></div><p class="note">พบระหว่าง ม.ค.–มิ.ย. และไม่พบตั้งแต่ ก.ค. ตามข้อมูลในไฟล์</p></div>
+<div><h2>สาเหตุที่พบในช่องวิเคราะห์สาเหตุ</h2>
+<div class="row"><span>วัตถุดิบหินและทราย (รวมการตรวจรับ)</span><i style="width:100%"></i><em>5</em></div>
+<div class="row"><span>เศษคอนกรีตแข็งติดในโม่</span><i style="width:20%"></i><em>1</em></div>
+<div class="row"><span>รถโม่เกี่ยวกิ่งไม้ขณะเข้าหน้างาน</span><i style="width:20%"></i><em>1</em></div>
+<div class="row"><span>เศษวัสดุจากพื้นที่เทของลูกค้า</span><i style="width:20%"></i><em>1</em></div>
+<p class="note">ทั้ง 8 เรื่องกรอกสาเหตุครบ</p></div>
+</div>
+<ul><li><b>ต้นทางคือวัตถุดิบ:</b> 5 จาก 8 เรื่อง มาจากหินและทราย เช่น ผงถ่าน ดอกไม้ยางที่ปลิวมาตกที่กองสต็อก และการตรวจรับไม่ถี่ถ้วน</li><li><b>ปิดครบทุกเรื่อง:</b> ลูกค้ามักไม่ติดใจหลังได้รับคำชี้แจง แต่หลายรายขอให้ตรวจก่อนจัดส่งทุกครั้ง</li><li><b>ไม่ใช่ปัญหาเฉพาะพื้นที่:</b> พบกระจายทั้ง 6 กิจการ จึงควรใช้มาตรฐานตรวจรับเดียวกันทุกโรงงาน</li><li><b>แนวทาง:</b> ตรวจรับวัตถุดิบทุกคันและแช่น้ำตรวจ คลุมกองสต็อกด้วยสแลน ล้างเศษคอนกรีตในโม่ก่อนรับงาน และให้รถโม่ระวังกิ่งไม้ระดับต่ำ</li></ul></section>
+
+<section class="card wide"><h2>หมวดย่อยที่เหลือ</h2>
+<p class="note" style="margin-top:0">สาเหตุสรุปจากช่องการวิเคราะห์สาเหตุของแต่ละเรื่อง เรียงตามจำนวนเรื่อง เรื่องที่ยังไม่กรอกสาเหตุไม่นับรวม</p>
+<div class="sg">
+<div class="sc" id="c-stone"><h3>หินเยอะไป <small>7 เรื่อง</small></h3><p class="meta">ปิดแล้ว 7 (Franchise 2)<br>Metro 4, South 2, East 1</p>
+<ul><li>ทรายหยาบมาก และเครื่องชั่งหินทรายขัดข้อง</li><li>การเติมน้ำหน้างาน การเทด้วยกระป๋องนาน และรถโม่ไม่หมุนโม่ก่อนคาย</li><li>งาน topping บาง 3 ซม. ใช้หิน 3/4 นิ้ว ไม่เหมาะสม และมี 1 เรื่องมาจากความไม่พอใจเรื่องค่าขนส่ง</li></ul></div>
+<div class="sc" id="c-set"><h3>ไม่เซ็ตตัวตามกำหนด <small>5 เรื่อง</small></h3><p class="meta">ปิดแล้ว 4, ค้าง 1 (Franchise 1)<br>South 3, East 1, Metro 1</p>
+<ul><li>การเติมน้ำหรือราดน้ำหน้าคอนกรีตมากเกิน 3 เรื่อง</li><li>ลูกค้าใช้ Super Plus ครั้งแรก โดยไม่ทราบเวลาเซ็ตตัว และสั่งเทช่วงเย็น</li><li>แนวทาง: ชี้แจงเวลาเซ็ตตัวของสินค้าใหม่ก่อนขาย</li></ul></div>
+<div class="sc" id="c-cement"><h3>ปริมาณซิเมนต์น้อย <small>4 เรื่อง</small></h3><p class="meta">ปิดแล้ว 3, ค้าง 1<br>East, Northeast, South, West กิจการละ 1</p>
+<ul><li>ทุกเรื่องที่กรอกสาเหตุ (3 เรื่อง) เกี่ยวกับปริมาณคอนกรีตที่ใช้จริง: แบบหล่อคลาดเคลื่อน หลุมใหญ่กว่าคาด หรือไม่เผื่อความหนา</li><li>ลักษณะคล้ายหมวดไม่ครบคิว ควรใช้แนวทางแก้ไขเดียวกัน</li></ul></div>
+<div class="sc" id="c-crack"><h3>แตกร้าว <small>4 เรื่อง</small></h3><p class="meta">ปิดแล้ว 3, ค้าง 1<br>Northeast, Metro, West, East กิจการละ 1</p>
+<ul><li>สาเหตุที่กรอกครบทั้ง 3 เรื่องเกิดจากวิธีทำงานหน้างาน: ตัด joint ตื้น (ลึก 2 ซม.) รอยต่อแบบและ bleeding และผิวหน้าแห้งเร็วจากลมแรง</li><li>เรื่องที่ค้างลูกค้าแจ้งว่าส่งรูปให้เซลล์แล้ว แต่ไม่ได้รับการตอบกลับ</li></ul></div>
+<div class="sc" id="c-sand"><h3>ทรายเยอะไป <small>4 เรื่อง</small></h3><p class="meta">ปิดแล้ว 4 (Franchise 2)<br>West 2, Northeast 1, North 1</p>
+<ul><li>รถโม่ไม่หมุนโม่ก่อนคาย และ จบส. เติมน้ำตามคำขอคนงาน</li><li>หินเล็กและทรายมีกรวดปน รวมถึง 1 เรื่องที่ส่วนผสม CPAC Super ให้เนื้อหยาบ อยู่ระหว่างปรับสูตร</li></ul></div>
+<div class="sc" id="c-other"><h3>หมวดย่อยอื่น ๆ <small>11 เรื่อง (7 หมวด)</small></h3><p class="meta">ปิดแล้ว 10, ค้าง 1</p>
+<ul><li>สีผิดปกติ 3 เรื่อง: แหล่งหินหรือทรายเปลี่ยน ทำให้สีต่างจากที่ลูกค้าคุ้นเคย คุณภาพผ่านการทดสอบ</li><li>อื่น ๆ โปรดระบุ 3 เรื่อง: เติมน้ำท้ายโม่ ปูนจากโรงทุ่งสงเซ็ตช้า และ slump เหลวทำให้เซ็ตช้า</li><li>อีก 5 เรื่องกระจายใน slump ไม่สม่ำเสมอ ทรายหยาบ หินน้อย หินเล็ก และหินใหญ่ หมวดละ 1 เรื่อง</li></ul></div>
+</div>
+<ul style="margin-top:14px"><li><b>สรุปภาพรวมทุกหมวด:</b> สาเหตุหลักแบ่งได้ 3 กลุ่ม คือ การเติมน้ำและความไม่ชัดเจนของ slump (กลุ่ม slump, คุณสมบัติการทำงาน, ไม่เซ็ตตัว, หิน/ทรายเยอะ), แบบหล่อและความหนาหน้างานคลาดเคลื่อน (ไม่ครบคิว, ซีเมนต์น้อย) และคุณภาพวัตถุดิบหินทราย (สิ่งเจือปน, สีผิดปกติ)</li></ul></section>
+</div></main>
+<script>
+(function(){var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('.lk').forEach(function(el){
+function go(){var t=document.getElementById(el.getAttribute('data-t'));if(!t)return;
+t.scrollIntoView({behavior:rm?'auto':'smooth',block:'start'});
+t.classList.add('hl');setTimeout(function(){t.classList.remove('hl')},1800);}
+el.addEventListener('click',go);
+el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});
+});})();
+</script></body></html>
